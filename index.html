@@ -1,0 +1,1520 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#151a31">
+  <title>USFans spreadsheet — jak wybierać, mierzyć i sprawdzać QC</title>
+  <meta name="description" content="USFans spreadsheet po polsku: kategorie butów, ubrań i dodatków, porównanie rozmiarów, zdjęcia QC oraz poradniki przed zakupem. Przejdź do Hipobuyfind.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:title" content="USFans spreadsheet — od inspiracji do świadomego wyboru">
+  <meta property="og:description" content="Wybierz kategorię. Porównaj wymiary. Sprawdź zdjęcia i pełny koszt. Niezależny poradnik po polsku z przejściem do Hipobuyfind.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1641792669610-83e23d551bec?auto=format&amp;fit=crop&amp;w=1200&amp;q=75">
+  <meta property="og:image:alt" content="Białe sneakersy Nike Air Force na betonowej powierzchni">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="USFans spreadsheet — przewodnik po wyborze produktów">
+  <meta name="twitter:description" content="Buty, odzież i dodatki: praktyczne porady o wymiarach, QC i porównywaniu ofert.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1641792669610-83e23d551bec?auto=format&amp;fit=crop&amp;w=1200&amp;q=75">
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <!--
+  Plik: index.html. Język: polski.
+  Samodzielny dokument bez bibliotek i skryptów zewnętrznych.
+  Zapisany plik: [index.html](sandbox:/workspace/scratch/0053ea7e81fc/index.html)
+
+  Domena publikacji nie została podana. Po jej ustaleniu dodaj canonical
+  i og:url wskazujące rzeczywisty adres tej strony, zamiast adresu
+  katalogu docelowego.
+
+  Badanie intencji wyszukiwania: 5 listopada 2026.
+  Bezpośrednie pobranie wyników Google było niedostępne. Poniższe 10 domen
+  znaleziono w dostępnym indeksie wyszukiwania; nie potwierdzono ich pozycji
+  na pierwszej stronie Google. Analiza dotyczy tytułów i dostępnej treści,
+  a nie pełnego audytu metadanych HTML. Tekst poniżej napisano od nowa.
+
+  Domena | temat tytułu SEO | frazy i intencje zauważone w treści:
+  usfansindex.com | Finds, W2C, zdjęcia QC | kategorie, odnośnik źródłowy, kontrola produktu.
+  usfansspreadsheet.gg | Spreadsheet i finds | telefon, odzież, buty, przegląd kategorii.
+  usfansbuys.com | Spreadsheet i poradniki | wybór produktu, rozmiar, QC, wysyłka.
+  usfanswithqc.com/spreadsheet | Kategorie i marki | zdjęcia QC, porównywanie wariantów.
+  usfansspreadsheet.space | Weidian, Taobao i 1688 | katalog, poradniki, grupy odzieży.
+  usfanssheet.us | Finds i QC | fragment indeksu: fotografie, kategorie, wyszukiwanie produktów.
+  usfans-yupoo.com/en | Product Finds i badanie źródeł | źródłowa oferta, marka, porównanie danych.
+  us-fans.us | Spreadsheet, finds i QC | listy kategorii i instrukcja korzystania.
+  usfans.world | Finds i W2C | inspiracje, szczegóły produktu, pytania kupujących.
+  usfansspreadsheet.net | Katalog QC | aktualność danych, pochodzenie linków, koszty przesyłki.
+
+  Nie przejęto liczebności katalogów, cen, opinii, obietnic aktualizacji ani partnerstw.
+
+  Cztery pomocnicze obszary:
+  USFans finds; zdjęcia QC USFans; rozmiary USFans; poradnik zakupowy USFans.
+
+  28 intencji długiego ogona rozwinięto w widocznych sekcjach:
+  wybór butów do codziennego noszenia; pomiar wkładki w centymetrach;
+  porównanie szerokości butów; sprawdzanie podeszwy na zdjęciach;
+  pomiar bluzy pod pachami; dobór długości rękawa;
+  porównanie gramatury koszulek; odczyt składu materiału;
+  dobór kurtki na warstwy; porównanie długości spodni;
+  pomiar pasa szortów; dobór obwodu czapki;
+  porównanie rozmiarów kompletu; sprawdzenie składu bielizny;
+  wymiary koszulki piłkarskiej; dobór rozmiaru bransoletki;
+  odczyt wymiarów apaszki; porównanie zdjęć wariantów;
+  kontrola szwów na zdjęciach QC; brakujące zdjęcia produktu;
+  znaczenie linku W2C; weryfikacja linku źródłowego;
+  identyfikacja sprzedawcy; porównanie pełnego kosztu;
+  sprawdzenie waluty oferty; uwzględnienie opakowania;
+  weryfikacja zasad zwrotu; rozróżnienie inspiracji i oferty.
+  -->
+  <style>
+    :root {
+      color-scheme: light;
+      --navy: #151a31;
+      --panel: #202741;
+      --paper: #f4f4f9;
+      --white: #fff;
+      --ink: #20243a;
+      --muted: #5b6077;
+      --line: #dbdce8;
+      --lilac: #c9bdff;
+      --blue: #4234a4;
+      --max: 1160px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    a {
+      color: inherit;
+      text-underline-offset: 4px;
+    }
+
+    a:focus-visible,
+    summary:focus-visible,
+    [tabindex]:focus-visible {
+      outline: 3px solid #7863dc;
+      outline-offset: 5px;
+    }
+
+    a:hover {
+      color: var(--blue);
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    h1,
+    h2,
+    h3,
+    p,
+    figure {
+      margin: 0;
+    }
+
+    h1,
+    h2,
+    h3 {
+      line-height: 1.14;
+      text-wrap: balance;
+      overflow-wrap: break-word;
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 5.2vw, 4.6rem);
+      letter-spacing: -.055em;
+      font-weight: 780;
+    }
+
+    h2 {
+      font-size: clamp(1.8rem, 3.4vw, 2.8rem);
+      letter-spacing: -.045em;
+    }
+
+    h3 {
+      font-size: 1.14rem;
+      letter-spacing: -.015em;
+    }
+
+    p + p {
+      margin-top: 1rem;
+    }
+
+    .wrap {
+      width: min(var(--max), calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    .overline {
+      font-size: .72rem;
+      font-weight: 750;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    .mast {
+      background: var(--navy);
+      color: white;
+    }
+
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      min-height: 78px;
+    }
+
+    .brand {
+      font-size: 1.15rem;
+      font-weight: 800;
+      text-decoration: none;
+      letter-spacing: -.035em;
+    }
+
+    .brand b {
+      display: inline-grid;
+      place-items: center;
+      width: 29px;
+      height: 29px;
+      margin-right: 8px;
+      border-radius: 50%;
+      background: var(--lilac);
+      color: var(--navy);
+      font-size: .85rem;
+    }
+
+    .top small {
+      font-size: .75rem;
+      color: #d3d4e4;
+    }
+
+    .mast a:hover {
+      color: var(--lilac);
+    }
+
+    .category-zone {
+      padding-block: 20px 25px;
+      border-top: 1px solid #3a4058;
+    }
+
+    .category-label {
+      font-size: .73rem;
+      color: #d3d4e4;
+      margin-bottom: 12px;
+    }
+
+    .category-nav {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .category-nav a {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 64px;
+      padding: 10px 13px;
+      border: 1px solid #434960;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 650;
+      font-size: .82rem;
+    }
+
+    .category-nav a span {
+      font-size: .66rem;
+      font-weight: 450;
+      color: #ccd0e2;
+      line-height: 1.4;
+    }
+
+    .category-nav a:hover {
+      background: #303853;
+      border-color: var(--lilac);
+      color: white;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+      align-items: center;
+      padding-block: 48px 52px;
+    }
+
+    .hero .overline {
+      color: var(--blue);
+      margin-bottom: 17px;
+    }
+
+    .hero h1 span {
+      display: block;
+      color: var(--blue);
+    }
+
+    .intro {
+      max-width: 51ch;
+      color: var(--muted);
+      margin-top: 22px;
+      font-size: 1.02rem;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      min-height: 48px;
+      padding: 12px 21px;
+      margin-top: 25px;
+      border-radius: 7px;
+      background: var(--blue);
+      color: white;
+      font-size: .91rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .button:hover {
+      background: var(--navy);
+      color: white;
+    }
+
+    .small-note {
+      font-size: .75rem;
+      color: var(--muted);
+      margin-top: 12px;
+      max-width: 55ch;
+    }
+
+    .hero figure {
+      border-radius: 12px;
+      overflow: hidden;
+      background: #d9dce3;
+    }
+
+    .hero img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+    }
+
+    .hero figcaption {
+      background: var(--navy);
+      color: #e5e4f2;
+      padding: 12px 17px;
+      font-size: .73rem;
+    }
+
+    .answer {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 30px;
+      padding: 27px 30px;
+      background: #e8e3ff;
+      border-radius: 10px;
+      border-left: 4px solid var(--blue);
+    }
+
+    .answer h2 {
+      font-size: 1.05rem;
+      line-height: 1.4;
+      letter-spacing: 0;
+    }
+
+    .answer p {
+      font-size: .94rem;
+      max-width: 83ch;
+    }
+
+    .section {
+      padding-block: 58px;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 25px;
+      margin-bottom: 25px;
+    }
+
+    .section-head .overline {
+      color: var(--blue);
+      margin-bottom: 11px;
+    }
+
+    .section-head > p {
+      max-width: 42ch;
+      color: var(--muted);
+      font-size: .88rem;
+    }
+
+    .themes {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .theme {
+      background: var(--white);
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+    }
+
+    .theme figure {
+      background: #edf0f2;
+    }
+
+    .theme img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: contain;
+      background: #edf0f2;
+    }
+
+    .theme figcaption {
+      padding: 9px 15px;
+      background: #eeedf7;
+      font-size: .7rem;
+      color: #4a4c66;
+    }
+
+    .theme-copy {
+      padding: 20px 17px;
+    }
+
+    .theme h3 {
+      margin-bottom: 11px;
+    }
+
+    .theme p {
+      font-size: .84rem;
+      color: var(--muted);
+    }
+
+    .theme a {
+      display: inline-block;
+      margin-top: 15px;
+      font-size: .8rem;
+      font-weight: 700;
+    }
+
+    .disclosure {
+      margin-top: 18px;
+      font-size: .76rem;
+      color: var(--muted);
+      max-width: 95ch;
+    }
+
+    .measure {
+      background: var(--white);
+      border-block: 1px solid var(--line);
+    }
+
+    .table-scroll {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: 9px;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      font-size: .86rem;
+      text-align: left;
+    }
+
+    caption {
+      text-align: left;
+      padding: 16px 18px;
+      background: #efedf9;
+      font-weight: 700;
+      color: var(--blue);
+    }
+
+    th,
+    td {
+      padding: 15px 18px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+    }
+
+    thead th {
+      background: var(--navy);
+      color: white;
+      font-size: .76rem;
+      font-weight: 650;
+    }
+
+    tbody th {
+      width: 19%;
+      font-weight: 700;
+    }
+
+    tbody tr:last-child > * {
+      border-bottom: 0;
+    }
+
+    tbody tr:nth-child(even) {
+      background: #faf9fd;
+    }
+
+    .reading {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 26px;
+    }
+
+    .article {
+      border-top: 3px solid var(--blue);
+      padding-top: 20px;
+    }
+
+    .article .number {
+      font-size: .72rem;
+      letter-spacing: .08em;
+      color: var(--blue);
+      margin-bottom: 13px;
+      display: block;
+      font-weight: 700;
+    }
+
+    .article h3 {
+      font-size: 1.34rem;
+      line-height: 1.2;
+      margin-bottom: 17px;
+    }
+
+    .article p,
+    .article li {
+      font-size: .89rem;
+      color: var(--muted);
+    }
+
+    .article ul {
+      padding-left: 20px;
+      margin-block: 16px 0;
+    }
+
+    .article li + li {
+      margin-top: 8px;
+    }
+
+    .article footer {
+      font-size: .72rem;
+      color: var(--muted);
+      margin-top: 20px;
+    }
+
+    .qc {
+      background: var(--navy);
+      color: white;
+      border-radius: 13px;
+      padding: 32px;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 38px;
+      margin-top: 38px;
+    }
+
+    .qc .overline {
+      color: var(--lilac);
+      margin-bottom: 12px;
+    }
+
+    .qc h2 {
+      font-size: 1.9rem;
+    }
+
+    .qc p {
+      font-size: .88rem;
+      color: #dedfed;
+      margin-top: 15px;
+    }
+
+    .qc ol {
+      padding-left: 22px;
+      margin: 0;
+    }
+
+    .qc li {
+      padding-left: 6px;
+      font-size: .9rem;
+    }
+
+    .qc li + li {
+      margin-top: 14px;
+    }
+
+    .faq-zone {
+      background: #e9e8f3;
+      padding-block: 54px;
+    }
+
+    .faq-layout {
+      display: grid;
+      grid-template-columns: .7fr 1.3fr;
+      gap: 50px;
+    }
+
+    .faq-layout .overline {
+      color: var(--blue);
+      margin-bottom: 15px;
+    }
+
+    .faq-layout > div > p {
+      font-size: .9rem;
+      color: var(--muted);
+      margin-top: 19px;
+    }
+
+    details {
+      border-bottom: 1px solid #cccbdc;
+    }
+
+    summary {
+      cursor: pointer;
+      padding: 19px 0;
+      font-size: .96rem;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    details p {
+      padding: 0 0 20px;
+      font-size: .9rem;
+      color: #4d5268;
+    }
+
+    .closing {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      padding-block: 38px;
+    }
+
+    .closing h2 {
+      font-size: 1.4rem;
+      letter-spacing: -.02em;
+    }
+
+    .closing p {
+      color: var(--muted);
+      font-size: .86rem;
+      margin-top: 8px;
+    }
+
+    .closing .button {
+      margin: 0;
+      flex-shrink: 0;
+    }
+
+    .site-footer {
+      background: var(--navy);
+      color: #d1d4e5;
+      padding-block: 28px;
+      font-size: .75rem;
+    }
+
+    .site-footer .wrap {
+      display: flex;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .site-footer p {
+      max-width: 90ch;
+    }
+
+    @media (min-width: 900px) {
+      .below-fold {
+        content-visibility: auto;
+        contain-intrinsic-size: auto 700px;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .themes {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .hero {
+        gap: 24px;
+      }
+
+      .hero img {
+        height: 380px;
+      }
+
+      .reading {
+        gap: 20px;
+      }
+
+      .category-nav a {
+        padding-inline: 9px;
+      }
+
+      .faq-layout {
+        gap: 30px;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .wrap {
+        width: calc(100% - 30px);
+      }
+
+      .top {
+        min-height: 68px;
+      }
+
+      .top small {
+        max-width: 125px;
+        text-align: right;
+        font-size: .66rem;
+      }
+
+      .category-nav {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 6px;
+      }
+
+      .category-nav a {
+        min-height: 52px;
+        padding: 8px 11px;
+      }
+
+      .category-label {
+        font-size: .7rem;
+      }
+
+      .category-zone {
+        padding-block: 14px 18px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        padding-block: 32px;
+        gap: 27px;
+      }
+
+      .hero img {
+        height: 310px;
+      }
+
+      .hero h1 {
+        max-width: 15ch;
+      }
+
+      .intro {
+        margin-top: 17px;
+      }
+
+      .answer {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 23px;
+      }
+
+      .section {
+        padding-block: 38px;
+      }
+
+      .section-head {
+        display: block;
+      }
+
+      .section-head > p {
+        margin-top: 16px;
+      }
+
+      .themes {
+        gap: 11px;
+      }
+
+      .theme-copy {
+        padding: 16px 12px;
+      }
+
+      .theme h3 {
+        font-size: 1.02rem;
+      }
+
+      .theme figcaption {
+        font-size: .63rem;
+        padding-inline: 10px;
+      }
+
+      .theme p {
+        font-size: .8rem;
+      }
+
+      .reading {
+        grid-template-columns: 1fr;
+        gap: 31px;
+      }
+
+      .article {
+        padding-top: 16px;
+      }
+
+      .qc {
+        grid-template-columns: 1fr;
+        gap: 23px;
+        padding: 24px;
+        margin-top: 30px;
+      }
+
+      .faq-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .faq-zone {
+        padding-block: 35px;
+      }
+
+      th,
+      td {
+        padding: 12px 11px;
+      }
+
+      table {
+        font-size: .79rem;
+        min-width: 540px;
+      }
+
+      .closing {
+        display: block;
+      }
+
+      .closing .button {
+        margin-top: 19px;
+      }
+
+      .site-footer .wrap {
+        display: block;
+      }
+
+      .site-footer a {
+        display: inline-block;
+        margin-top: 13px;
+      }
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      a,
+      summary {
+        transition: background-color .15s, color .15s;
+      }
+    }
+
+    @media print {
+      body {
+        background: white;
+        color: black;
+      }
+
+      .mast,
+      .button,
+      .closing,
+      .site-footer {
+        display: none;
+      }
+
+      .hero,
+      .reading,
+      .faq-layout,
+      .qc {
+        display: block;
+      }
+
+      .hero img {
+        height: 220px;
+      }
+
+      .section {
+        padding-block: 20px;
+      }
+
+      .article {
+        margin-bottom: 22px;
+      }
+
+      .qc {
+        background: white;
+        color: black;
+      }
+
+      .qc p {
+        color: black;
+      }
+
+      details::details-content {
+        content-visibility: visible;
+      }
+
+      .below-fold {
+        content-visibility: visible;
+      }
+
+      a {
+        color: black;
+      }
+
+      .theme {
+        break-inside: avoid;
+      }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": "#strona",
+        "name": "USFans spreadsheet — jak wybierać, mierzyć i sprawdzać QC",
+        "description": "Niezależny poradnik po polsku o wyborze butów, odzieży i dodatków. Kategorie prowadzą do Hipobuyfind.",
+        "inLanguage": "pl",
+        "about": [
+          {
+            "@type": "Thing",
+            "name": "Wybór odzieży i obuwia"
+          },
+          {
+            "@type": "Thing",
+            "name": "Porównywanie wymiarów i zdjęć produktów"
+          }
+        ],
+        "hasPart": [
+          {"@id": "#artykul-rozmiar"},
+          {"@id": "#artykul-qc"},
+          {"@id": "#artykul-koszt"},
+          {"@id": "#pytania"}
+        ]
+      },
+      {
+        "@type": "Article",
+        "@id": "#artykul-rozmiar",
+        "headline": "Rozmiary USFans: zacznij od własnej szafy",
+        "description": "Jak porównać wymiary posiadanej odzieży z tabelą konkretnej oferty i sprawdzić długość oraz szerokość obuwia.",
+        "inLanguage": "pl",
+        "isPartOf": {"@id": "#strona"}
+      },
+      {
+        "@type": "Article",
+        "@id": "#artykul-qc",
+        "headline": "Zdjęcia QC USFans: czego nie pokaże miniatura",
+        "description": "Jak porównywać wariant, szwy i parę butów oraz kiedy potrzebne są dodatkowe fotografie.",
+        "inLanguage": "pl",
+        "isPartOf": {"@id": "#strona"}
+      },
+      {
+        "@type": "Article",
+        "@id": "#artykul-koszt",
+        "headline": "Poradnik zakupowy USFans: zapisz pełny koszt",
+        "description": "Jak uporządkować walutę oferty, opłaty, opakowanie, transport i warunki zwrotu przed zakupem.",
+        "inLanguage": "pl",
+        "isPartOf": {"@id": "#strona"}
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "#pytania",
+        "inLanguage": "pl",
+        "isPartOf": {"@id": "#strona"},
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Czym jest USFans spreadsheet?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "To określenie listy lub katalogu odnośników do produktów, używanego podczas poszukiwania ofert dla USFans. Sama obecność na liście nie potwierdza jakości, autentyczności ani bieżącej dostępności produktu."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Dokąd prowadzą przyciski na tej stronie?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Przyciski kategorii otwierają odpowiednie działy hipobuyfind.com. Pozostałe odnośniki prowadzą do strony głównej www.hipobuyfind.com. Nie są to bezpośrednie przyciski zamówienia w USFans."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Czy zdjęcia QC potwierdzają autentyczność?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nie. Zdjęcia QC pomagają ocenić widoczne cechy, wariant i wykonanie. Nie zastępują potwierdzenia pochodzenia, dokumentów zakupu ani specjalistycznej oceny autentyczności."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Jak wybrać rozmiar butów i bluzy?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Porównaj tabelę konkretnego produktu z wymiarami rzeczy, które dobrze na Ciebie pasują. Dla butów sprawdź sposób pomiaru długości i szerokość; dla bluzy szerokość pod pachami, długość oraz rękaw. Sam symbol EU, S lub M nie wystarcza."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Co oznacza W2C i jak sprawdzić link źródłowy?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "W2C to skrót od angielskiego pytania o miejsce zakupu. Po otwarciu linku sprawdź sprzedawcę, identyfikator produktu, zdjęcia oraz wariant. Nie zakładaj, że podobny tytuł oznacza tę samą ofertę."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Co zrobić, gdy brakuje zdjęć lub wymiarów?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Poproś o brakujący pomiar albo fotografię konkretnego detalu przed decyzją. Jeśli informacji nie można uzyskać, uwzględnij tę niepewność i porównaj inną ofertę zamiast zgadywać."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Czy pokazane zdjęcia oznaczają dostępność w katalogu?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nie. Fotografie Nike, Gucci, Louis Vuitton, Dior i Hermès ilustrują tematy poradnika. Nie potwierdzają stanu magazynowego, ceny ani powiązania marki z tą stroną lub Hipobuyfind."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Jak porównywać koszt zamówienia do Polski?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Zapisz walutę i cenę wariantu, dostępne opłaty obsługi, transport, opakowanie oraz ewentualne należności importowe. Użyj aktualnej wyceny dla kraju dostawy i wybranej metody; ta strona nie podaje taryf ani terminów doręczenia."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+<link rel="canonical" href="https://kakobuyfinds.github.io/aqkdl/">
+</head>
+<body>
+  <header class="mast">
+    <div class="wrap top">
+      <a class="brand" href="https://www.hipobuyfind.com">
+        <b aria-hidden="true">H</b>Hipobuyfind / notatnik
+      </a>
+      <small>Niezależny poradnik<br>Wersja polska · PL</small>
+    </div>
+
+    <div class="wrap category-zone">
+      <p class="category-label">Zacznij od kategorii — odnośniki otwierają katalog Hipobuyfind</p>
+      <nav class="category-nav" aria-label="Kategorie produktów w Hipobuyfind">
+        <a href="https://hipobuyfind.com/category-911-Shoes.html">
+          Buty<span lang="en">Shoes ↗</span>
+        </a>
+        <a href="https://hipobuyfind.com/category-912-Hoodies%2FSweaters.html">
+          Bluzy i swetry<span lang="en">Hoodies/Sweaters ↗</span>
+        </a>
+        <a href="https://hipobuyfind.com/category-913-T-Shirts.html">
+          Koszulki<span lang="en">T-Shirts ↗</span>
+        </a>
+        <a href="https://hipobuyfind.com/category-914-Jackets.html">
+          Kurtki<span lang="en">Jackets ↗</span>
+        </a>
+        <a href="https://hipobuyfind.com/category-915-Pants%2FShorts.html">
+          Spodnie i szorty<span lang="en">Pants/Shorts ↗</span>
+        </a>
+        <a href="https://hipobuyfind.com/category-916-Headwear.html">
+          Nakrycia głowy<span lang="en">Headwear ↗</span>
+        </a>
+        <a href="https://hipobuyfind.com/category-917-Sets.html">
+          Komplety<span lang="en">Sets ↗</span>
+        </a>
+        <a href="https://hipobuyfind.com/category-918-underwear%2Funderpants.html">
+          Bielizna<span lang="en">Underwear/underpants ↗</span>
+        </a>
+        <a href="https://hipobuyfind.com/category-919-Jersey.html">
+          Koszulki sportowe<span lang="en">Jersey ↗</span>
+        </a>
+        <a href="https://hipobuyfind.com/category-920-Accessories.html">
+          Akcesoria<span lang="en">Accessories ↗</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="tresc">
+    <section class="wrap hero" aria-labelledby="tytul">
+      <div>
+        <p class="overline">Mniej zgadywania. Więcej konkretów.</p>
+        <h1 id="tytul">
+          USFans spreadsheet
+          <span>Wybór zaczyna się od detali.</span>
+        </h1>
+        <p class="intro">
+          Dobre znalezisko to początek. Zanim wybierzesz buty, bluzę lub dodatek,
+          porównaj wymiary, obejrzyj zdjęcia i sprawdź źródło oferty.
+          Ten notatnik pomaga uporządkować decyzję.
+        </p>
+        <a class="button" href="https://www.hipobuyfind.com">
+          Otwórz katalog Hipobuyfind <span aria-hidden="true">↗</span>
+        </a>
+        <p class="small-note">
+          Materiały informacyjne. Ta strona nie jest oficjalną witryną USFans
+          i nie przyjmuje zamówień.
+        </p>
+      </div>
+
+      <figure>
+        <img
+          src="https://images.unsplash.com/photo-1641792669610-83e23d551bec?auto=format&amp;fit=crop&amp;w=960&amp;q=75"
+          srcset="https://images.unsplash.com/photo-1641792669610-83e23d551bec?auto=format&amp;fit=crop&amp;w=480&amp;q=75 480w, https://images.unsplash.com/photo-1641792669610-83e23d551bec?auto=format&amp;fit=crop&amp;w=960&amp;q=75 960w"
+          sizes="(max-width:650px) calc(100vw - 30px), 550px"
+          width="960"
+          height="640"
+          alt="Para białych sneakersów Nike Air Force na betonowej powierzchni"
+          fetchpriority="high"
+          loading="eager"
+          decoding="async">
+        <figcaption>
+          Nike · ilustracja tematu: proporcje, kształt cholewki i wykończenie podeszwy.
+          Fotografia z Unsplash.
+        </figcaption>
+      </figure>
+    </section>
+
+    <aside class="wrap answer" aria-labelledby="szybka-odpowiedz">
+      <h2 id="szybka-odpowiedz">Czym jest taka lista?</h2>
+      <p>
+        <strong>USFans spreadsheet to lista odnośników do produktów służąca do wyszukiwania ofert.</strong>
+        Traktuj ją jako punkt wyjścia: sam wpis nie potwierdza jakości ani pochodzenia
+        rzeczy. Na tej stronie znajdziesz porady, a odnośniki kategorii prowadzą do Hipobuyfind.
+      </p>
+    </aside>
+
+    <section class="wrap section below-fold" aria-labelledby="tematy">
+      <div class="section-head">
+        <div>
+          <p class="overline">Temat przewodni / detale garderoby</p>
+          <h2 id="tematy">Różne rzeczy.<br>Różne pytania przed wyborem.</h2>
+        </div>
+        <p>
+          USFans finds oznacza znaleziska. O ich przydatności decydują jednak
+          konkretne informacje: pomiar, materiał i czytelne zdjęcie.
+        </p>
+      </div>
+
+      <div class="themes">
+        <article class="theme">
+          <figure>
+            <img
+              src="https://media.gucci.com/style/DarkGray_Center_0_0_600x600/1710929723/803224_4HBA8_9066_001_100_0000_Light-casquette-en-toilegg.jpg"
+              width="600"
+              height="600"
+              alt="Biała czapka Gucci z wzorem GG i zielono-czerwonym pasem na daszku"
+              loading="lazy"
+              decoding="async">
+            <figcaption>Gucci · nakrycia głowy</figcaption>
+          </figure>
+          <div class="theme-copy">
+            <h3>Obwód przed fasonem</h3>
+            <p>
+              Dobór obwodu czapki zacznij od pomiaru głowy. Sprawdź zakres regulacji
+              i głębokość korony; zdjęcie z przodu nie pokaże całego dopasowania.
+            </p>
+            <a href="https://www.hipobuyfind.com">Przejdź do katalogu ↗</a>
+          </div>
+        </article>
+
+        <article class="theme">
+          <figure>
+            <img
+              src="https://us.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-monogram-silhouette-square-90--M97189_PM2_Front%20view.jpg?wid=600&amp;hei=600"
+              width="600"
+              height="600"
+              alt="Czarna apaszka Louis Vuitton z jasnym wzorem Monogram i kontrastowym obramowaniem"
+              loading="lazy"
+              decoding="async">
+            <figcaption>Louis Vuitton · tkaniny i wzory</figcaption>
+          </figure>
+          <div class="theme-copy">
+            <h3>Wymiar zmienia zastosowanie</h3>
+            <p>
+              Odczyt wymiarów apaszki ułatwia wybór sposobu wiązania. Sprawdź też
+              skład materiału, krawędzie i zalecenia pielęgnacji konkretnej oferty.
+            </p>
+            <a href="https://www.hipobuyfind.com">Zobacz katalog inspiracji ↗</a>
+          </div>
+        </article>
+
+        <article class="theme">
+          <figure>
+            <img
+              src="https://assets.christiandior.com/is/image/diorprod/LOOK_F_25_1_LOOK_699_E05?wid=600&amp;hei=750&amp;qlt=75"
+              width="600"
+              height="750"
+              alt="Modelka w beżowym płaszczu Dior z niebieską torbą Saddle we wzór Oblique"
+              loading="lazy"
+              decoding="async">
+            <figcaption>Dior · proporcje stylizacji</figcaption>
+          </figure>
+          <div class="theme-copy">
+            <h3>Spójrz na całą sylwetkę</h3>
+            <p>
+              Dobór kurtki na warstwy wymaga zapasu w ramionach i klatce piersiowej.
+              Oceniaj długość ubrania względem własnych wymiarów, a nie wyłącznie
+              sylwetki modela.
+            </p>
+            <a href="https://www.hipobuyfind.com">Otwórz katalog stylizacji ↗</a>
+          </div>
+        </article>
+
+        <article class="theme">
+          <figure>
+            <img
+              src="https://assets.hermes.com/is/image/hermesproduct/clic-h-bracelet--700001F%2001-worn-3-0-0-800-800_g.jpg"
+              width="800"
+              height="800"
+              alt="Bransoletka Hermès Clic H z czarną emalią i złotym wykończeniem na nadgarstku"
+              loading="lazy"
+              decoding="async">
+            <figcaption>Hermès · biżuteria i dopasowanie</figcaption>
+          </figure>
+          <div class="theme-copy">
+            <h3>Nie tylko wygląd zapięcia</h3>
+            <p>
+              Dobór rozmiaru bransoletki oprzyj na obwodzie nadgarstka i wymiarach
+              wewnętrznych. Zapytaj o materiał, mechanizm zapięcia oraz sposób czyszczenia.
+            </p>
+            <a href="https://www.hipobuyfind.com">Przeglądaj katalog ↗</a>
+          </div>
+        </article>
+      </div>
+
+      <p class="disclosure">
+        Zdjęcia są ilustracjami redakcyjnymi, a nie ofertami sprzedaży ani potwierdzeniem
+        dostępności. Źródła: Unsplash oraz materiały obrazowe Gucci, Louis Vuitton,
+        Dior i Hermès. Nazwy marek identyfikują temat fotografii; nie oznaczają partnerstwa.
+      </p>
+    </section>
+
+    <section class="measure below-fold" aria-labelledby="pomiary">
+      <div class="wrap section">
+        <div class="section-head">
+          <div>
+            <p class="overline">Ściąga przed zakupem</p>
+            <h2 id="pomiary">Co porównywać w każdej kategorii?</h2>
+          </div>
+          <p>
+            Najpierw zbierz dane. Dwie oferty o podobnym wyglądzie mogą mieć inne
+            wymiary, materiał i warunki zakupu.
+          </p>
+        </div>
+
+        <div
+          class="table-scroll"
+          role="region"
+          aria-label="Tabela pomiarów, przewijana poziomo na małych ekranach"
+          tabindex="0">
+          <table>
+            <caption>Praktyczna lista pomiarów i szczegółów do sprawdzenia</caption>
+            <thead>
+              <tr>
+                <th scope="col">Kategoria</th>
+                <th scope="col">Najpierw sprawdź</th>
+                <th scope="col">Dopytaj, jeśli brakuje danych</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Buty</th>
+                <td>Pomiar wkładki w centymetrach i porównanie szerokości butów.</td>
+                <td>
+                  Czy podana długość dotyczy stopy, wkładki czy podeszwy?
+                  Obejrzyj bieżnik i oba boki pary.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Bluzy i swetry</th>
+                <td>Szerokość bluzy pod pachami, długość całkowita oraz długość rękawa.</td>
+                <td>
+                  Jak mierzony jest rękaw: od ramienia czy od szyi?
+                  Czy krój ma opuszczone ramiona?
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Koszulki</th>
+                <td>Skład, tabela wymiarów i gramatura koszulki, jeśli została podana.</td>
+                <td>
+                  Czy zdjęcie pokazuje ten sam kolor?
+                  Sama gramatura nie opisuje całej jakości tkaniny.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Kurtki</th>
+                <td>Miejsce na warstwy, szerokość ramion i długość pleców.</td>
+                <td>
+                  Czy podano rodzaj podszewki i wypełnienia?
+                  Nie oceniaj odporności na pogodę na podstawie zdjęcia.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Spodnie i szorty</th>
+                <td>Porównanie długości nogawki, stanu i pomiar pasa szortów.</td>
+                <td>
+                  Czy pas mierzono na płasko, w obwodzie czy po rozciągnięciu gumy?
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Nakrycia głowy</th>
+                <td>Obwód czapki, zakres regulacji i głębokość.</td>
+                <td>
+                  Czy rozmiar jest regulowany?
+                  Poproś o zdjęcie tyłu i wewnętrznej taśmy.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Komplety</th>
+                <td>Porównanie rozmiarów góry i dołu osobno.</td>
+                <td>
+                  Co dokładnie zawiera komplet?
+                  Czy obie części można wybrać w różnych rozmiarach?
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Bielizna</th>
+                <td>Skład bielizny, obwód pasa i konstrukcja szwów.</td>
+                <td>
+                  Jakie warunki zwrotu obowiązują dla tej kategorii?
+                  Sprawdź je przed zakupem.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Koszulki sportowe</th>
+                <td>Wymiary koszulki piłkarskiej, fason i wybrana wersja nadruku.</td>
+                <td>
+                  Czy personalizacja jest częścią wariantu?
+                  Porównaj przód, tył oraz układ nadruków.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Akcesoria</th>
+                <td>Wymiary wewnętrzne, długość paska lub łańcuszka i materiał.</td>
+                <td>
+                  Czy zdjęcia pokazują zapięcie, wykończenie krawędzi
+                  i oznaczenia konkretnego wariantu?
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap section below-fold" aria-labelledby="poradniki">
+      <div class="section-head">
+        <div>
+          <p class="overline">Czytelnia / trzy krótkie artykuły</p>
+          <h2 id="poradniki">Zanim zapiszesz produkt na liście</h2>
+        </div>
+        <p>
+          Sprawdź dopasowanie, dowody na zdjęciach i warunki zakupu.
+          Każdy z tych kroków rozwiązuje inny problem.
+        </p>
+      </div>
+
+      <div class="reading">
+        <article class="article" id="artykul-rozmiar">
+          <span class="number">01 / DOPASOWANIE</span>
+          <h3>Rozmiary USFans: zacznij od własnej szafy</h3>
+          <p>
+            Wybierz ubranie, które dobrze leży, rozłóż je na płasko i zapisz jego
+            wymiary. Dopiero potem porównaj tabelę konkretnego produktu.
+            Ten sam symbol rozmiaru może oznaczać inny krój u innego sprzedawcy.
+          </p>
+          <p>
+            Przy wyborze butów do codziennego noszenia liczy się także szerokość
+            i miejsce na palce. Numer EU nie wyjaśnia sposobu pomiaru.
+            Jeśli opis i tabela się różnią, poproś o potwierdzenie.
+          </p>
+          <ul>
+            <li>Używaj tych samych punktów pomiarowych.</li>
+            <li>Oddziel wymiary ciała od wymiarów ubrania.</li>
+            <li>Nie dodawaj zapasu automatycznie do każdej wartości.</li>
+          </ul>
+          <footer>Wniosek: porównuj centymetry i metodę pomiaru.</footer>
+        </article>
+
+        <article class="article" id="artykul-qc">
+          <span class="number">02 / OGLĘDZINY</span>
+          <h3>Zdjęcia QC USFans: czego nie pokaże miniatura</h3>
+          <p>
+            QC, czyli kontrola jakości, pomaga ocenić widoczne cechy rzeczy.
+            Zacznij od porównania zdjęć wariantów: kolor, rozmiar i identyfikator
+            powinny odpowiadać wybranej ofercie. Fotografia innego zamówienia
+            pokazuje jedynie przykład.
+          </p>
+          <p>
+            Kontrola szwów na zdjęciach QC wymaga zbliżeń. W butach porównaj obie
+            sztuki i sprawdź podeszwę; w odzieży obejrzyj łączenia, mankiety oraz
+            nadruk. Światło może zmieniać odbiór koloru.
+          </p>
+          <ul>
+            <li>Sprawdź, do jakiego produktu należą zdjęcia.</li>
+            <li>Poproś o brakujące ujęcie ważnego detalu.</li>
+            <li>Nie traktuj fotografii jako certyfikatu autentyczności.</li>
+          </ul>
+          <footer>Wniosek: zdjęcie odpowiada tylko na to, co pokazuje.</footer>
+        </article>
+
+        <article class="article" id="artykul-koszt">
+          <span class="number">03 / WARUNKI</span>
+          <h3>Poradnik zakupowy USFans: zapisz pełny koszt</h3>
+          <p>
+            Cena przy miniaturze nie musi być kwotą końcową. Sprawdź walutę oferty
+            i cenę wybranego wariantu, następnie zapisz ujawnione opłaty obsługi
+            oraz transportu. Porównuj wyceny dla tego samego kraju dostawy
+            i podobnego zakresu usług.
+          </p>
+          <p>
+            Uwzględnienie opakowania ma znaczenie przy szacowaniu wielkości paczki.
+            Przed opłaceniem sprawdź zasady zwrotu, dostępność wariantu i tożsamość
+            sprzedawcy. Przy dostawie do Polski zweryfikuj również aktualne
+            warunki rozliczenia należności importowych.
+          </p>
+          <ul>
+            <li>Zachowaj link źródłowy i identyfikator produktu.</li>
+            <li>Oddziel koszt produktu od kosztu dostawy.</li>
+            <li>Nie zakładaj stałego kursu walut ani terminu doręczenia.</li>
+          </ul>
+          <footer>Wniosek: porównuj całe zamówienie, nie samą miniaturę.</footer>
+        </article>
+      </div>
+
+      <aside class="qc" aria-labelledby="kontrola">
+        <div>
+          <p class="overline">Krótka procedura</p>
+          <h2 id="kontrola">Jedna oferta.<br>Cztery punkty kontroli.</h2>
+          <p>
+            Zapisz odpowiedzi przed decyzją. Jeśli ważnego szczegółu
+            nie da się potwierdzić, porównaj inną ofertę.
+          </p>
+        </div>
+        <ol>
+          <li>
+            <strong>Źródło:</strong>
+            czy link otwiera właściwy produkt i sprzedawcę?
+          </li>
+          <li>
+            <strong>Wariant:</strong>
+            czy rozmiar, kolor i zawartość zestawu są jednoznaczne?
+          </li>
+          <li>
+            <strong>Dowody:</strong>
+            czy dostępne zdjęcia oraz wymiary odpowiadają na Twoje pytania?
+          </li>
+          <li>
+            <strong>Warunki:</strong>
+            czy rozumiesz pełny koszt, sposób dostawy i zasady zwrotu?
+          </li>
+        </ol>
+      </aside>
+    </section>
+
+    <section class="faq-zone below-fold" id="pytania" aria-labelledby="faq-tytul">
+      <div class="wrap faq-layout">
+        <div>
+          <p class="overline">Odpowiedzi bez skrótów myślowych</p>
+          <h2 id="faq-tytul">Najczęstsze pytania</h2>
+          <p>
+            Krótko o listach produktów, zdjęciach, rozmiarach
+            i kierunku odnośników.
+          </p>
+        </div>
+
+        <div>
+          <details open>
+            <summary>Czym jest USFans spreadsheet?</summary>
+            <p>To określenie listy lub katalogu odnośników do produktów, używanego podczas poszukiwania ofert dla USFans. Sama obecność na liście nie potwierdza jakości, autentyczności ani bieżącej dostępności produktu.</p>
+          </details>
+
+          <details>
+            <summary>Dokąd prowadzą przyciski na tej stronie?</summary>
+            <p>Przyciski kategorii otwierają odpowiednie działy hipobuyfind.com. Pozostałe odnośniki prowadzą do strony głównej www.hipobuyfind.com. Nie są to bezpośrednie przyciski zamówienia w USFans.</p>
+          </details>
+
+          <details>
+            <summary>Czy zdjęcia QC potwierdzają autentyczność?</summary>
+            <p>Nie. Zdjęcia QC pomagają ocenić widoczne cechy, wariant i wykonanie. Nie zastępują potwierdzenia pochodzenia, dokumentów zakupu ani specjalistycznej oceny autentyczności.</p>
+          </details>
+
+          <details>
+            <summary>Jak wybrać rozmiar butów i bluzy?</summary>
+            <p>Porównaj tabelę konkretnego produktu z wymiarami rzeczy, które dobrze na Ciebie pasują. Dla butów sprawdź sposób pomiaru długości i szerokość; dla bluzy szerokość pod pachami, długość oraz rękaw. Sam symbol EU, S lub M nie wystarcza.</p>
+          </details>
+
+          <details>
+            <summary>Co oznacza W2C i jak sprawdzić link źródłowy?</summary>
+            <p>W2C to skrót od angielskiego pytania o miejsce zakupu. Po otwarciu linku sprawdź sprzedawcę, identyfikator produktu, zdjęcia oraz wariant. Nie zakładaj, że podobny tytuł oznacza tę samą ofertę.</p>
+          </details>
+
+          <details>
+            <summary>Co zrobić, gdy brakuje zdjęć lub wymiarów?</summary>
+            <p>Poproś o brakujący pomiar albo fotografię konkretnego detalu przed decyzją. Jeśli informacji nie można uzyskać, uwzględnij tę niepewność i porównaj inną ofertę zamiast zgadywać.</p>
+          </details>
+
+          <details>
+            <summary>Czy pokazane zdjęcia oznaczają dostępność w katalogu?</summary>
+            <p>Nie. Fotografie Nike, Gucci, Louis Vuitton, Dior i Hermès ilustrują tematy poradnika. Nie potwierdzają stanu magazynowego, ceny ani powiązania marki z tą stroną lub Hipobuyfind.</p>
+          </details>
+
+          <details>
+            <summary>Jak porównywać koszt zamówienia do Polski?</summary>
+            <p>Zapisz walutę i cenę wariantu, dostępne opłaty obsługi, transport, opakowanie oraz ewentualne należności importowe. Użyj aktualnej wyceny dla kraju dostawy i wybranej metody; ta strona nie podaje taryf ani terminów doręczenia.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap closing" aria-labelledby="dalej">
+      <div>
+        <h2 id="dalej">Masz kryteria. Wybierz swoją kategorię.</h2>
+        <p>
+          Otwórz Hipobuyfind i porównaj dostępne informacje
+          o interesujących Cię rzeczach.
+        </p>
+      </div>
+      <a class="button" href="https://www.hipobuyfind.com">
+        Przejdź do Hipobuyfind <span aria-hidden="true">↗</span>
+      </a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>
+        Hipobuyfind / notatnik zakupowy. Niezależna treść informacyjna w języku
+        polskim. USFans i wymienione marki nie są przedstawiane jako operatorzy
+        ani partnerzy tej strony. Dostępność oraz warunki sprawdzaj w docelowej ofercie.
+      </p>
+      <a href="https://www.hipobuyfind.com">Katalog Hipobuyfind ↗</a>
+    </div>
+  </footer>
+</body>
+</html>
